@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "color": "red",
+    "temp": 105
+  },
+  {
+    "id": 2,
+    "color": "blue",
+    "temp": 90
+  },
+  {
+    "id": 3,
+    "color": "green",
+    "temp": 60
+  }
+]
