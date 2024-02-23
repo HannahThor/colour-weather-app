@@ -1,7 +1,13 @@
+import DisplayBox from "./DisplayBox";
+import Header from "./Header";
+import Search from "./Search";
+
 export default function Main() {
   return (
     <>
-      <div>Main</div>
+      <Header />
+      <Search />
+      <DisplayBox />
     </>
   );
 }
