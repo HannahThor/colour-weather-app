@@ -1,5 +1,10 @@
 import React from "react";
+import Weather from "./Weather";
 
 export default function DisplayBox() {
-  return <div>DisplayBox</div>;
+  return (
+    <main>
+      <Weather />
+    </main>
+  );
 }
