@@ -1,10 +1,9 @@
 import React from "react";
 import Weather from "./Weather";
+import InitialDisplay from "./InitialDisplay";
 
 export default function DisplayBox() {
-  return (
-    <main>
-      <Weather />
-    </main>
-  );
+  const city = "london";
+
+  return <main>{city === null ? <InitialDisplay /> : <Weather />}</main>;
 }
