@@ -14,7 +14,7 @@ export default function Footer() {
   return (
     <footer>
       <h4>List of Colours</h4>
-      <ul>{colourChart}</ul>
+      <ul className="colour-list">{colourChart}</ul>
     </footer>
   );
 }

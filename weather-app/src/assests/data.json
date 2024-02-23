@@ -13,5 +13,20 @@
     "id": 3,
     "color": "green",
     "temp": 60
+  },
+  {
+    "id": 4,
+    "color": "red",
+    "temp": 105
+  },
+  {
+    "id": 5,
+    "color": "blue",
+    "temp": 90
+  },
+  {
+    "id": 6,
+    "color": "green",
+    "temp": 60
   }
 ]
