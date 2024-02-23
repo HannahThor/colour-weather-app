@@ -9,16 +9,16 @@ export default function Weather() {
         <p>Current weather description</p>
         <p>
           <div>7</div>
-          <div>High temp</div>
+          <div>Max temp</div>
         </p>
         <p>
           <div>2</div>
-          <div>Low temp</div>
+          <div>Min temp</div>
         </p>
       </article>
       <section>
         <div>Colour of the day</div>
-        <div>Low temp</div>
+        <div className="colour-circle">7</div>
       </section>
     </>
   );
