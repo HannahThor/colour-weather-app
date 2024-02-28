@@ -1,5 +1,4 @@
 import React from "react";
-import "dotenv/config";
 
 export default function Search() {
   const handleClick = async () => {
@@ -7,7 +6,7 @@ export default function Search() {
       "https://api.weatherapi.com/v1/forecast.json?q=birmingham&days=1",
       {
         headers: {
-          key: process.env.WEATHER_API_KEY,
+          key: import.meta.env.WEATHER_API_KEY,
         },
       }
     );
