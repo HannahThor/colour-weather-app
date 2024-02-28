@@ -15,10 +15,11 @@ const location = async (city) => {
   console.log(locationData);
 
   // const lat = locationData[0].lat;
-  const lat = locationData.coord.lat;
-  const lon = locationData.coord.lon;
-  console.log(lat, lon);
-  return lat;
+  const temp_max = locationData.main.temp_max;
+  const temp_min = locationData.main.temp_min;
+  // const lon = locationData.coord.lon;
+  console.log(temp_max, temp_min);
+  return { temp_max, temp_min };
 };
 
 export default function Main() {
