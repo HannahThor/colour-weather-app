@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Search() {
+export default function Search({ location }) {
   const handleClick = async () => {
     // const response = await fetch(
     //   "https://api.weatherapi.com/v1/forecast.json?q=birmingham&days=1",
@@ -13,14 +13,7 @@ export default function Search() {
     // const data = await response.json();
     // console.log(data);
 
-    const locationResponse = await fetch(
-      "http://api.openweathermap.org/geo/1.0/direct?q=london&appid=980d4eb7360007329a040bec58ab7eb3"
-    );
-    const locationData = await locationResponse.json();
-    console.log(locationData);
-
-    // const lat = locationData[0].lat;
-    const { lat, lon } = locationData[0];
+    const { lat, lon } = await location("london");
     console.log(lat, lon);
 
     // const response = await fetch(
