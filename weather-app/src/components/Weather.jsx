@@ -7,14 +7,14 @@ export default function Weather() {
         <h1>Today in....</h1>
         <img src="../public/images/clouds.png" />
         <p>Current weather description</p>
-        <p>
+        <div>
           <div>7</div>
           <div>Max temp</div>
-        </p>
-        <p>
+        </div>
+        <div>
           <div>2</div>
           <div>Min temp</div>
-        </p>
+        </div>
       </article>
       <section>
         <div>Colour of the day</div>
