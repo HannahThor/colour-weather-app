@@ -25,3 +25,6 @@ dist-ssr
 
 # Dotenv file
 .env 
+
+# Weather app progress folder
+Weather-app-progress
