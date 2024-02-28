@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function Weather() {
+export default function Weather({ city }) {
   return (
     <>
       <article>
-        <h1>Today in....</h1>
+        <h1>Today in {city}</h1>
         <img src="../public/images/clouds.png" />
         <p>Current weather description</p>
         <div>
