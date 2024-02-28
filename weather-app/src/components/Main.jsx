@@ -3,16 +3,22 @@ import Header from "./Header";
 import Search from "./Search";
 
 const location = async (city) => {
+  console.log(import.meta.env);
   const locationResponse = await fetch(
-    `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=980d4eb7360007329a040bec58ab7eb3`
+    `
+    https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${
+      import.meta.env.VITE_WEATHER_API_KEY
+    }
+    `
   );
   const locationData = await locationResponse.json();
   console.log(locationData);
 
   // const lat = locationData[0].lat;
-  const { lat, lon } = locationData[0];
+  const lat = locationData.coord.lat;
+  const lon = locationData.coord.lon;
   console.log(lat, lon);
-  return { lat, lon };
+  return lat;
 };
 
 export default function Main() {
