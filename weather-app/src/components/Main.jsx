@@ -24,6 +24,14 @@ const location = async (city) => {
   return { temp_max, temp_min };
 };
 
+const historical = async (city) => {
+  const historicalResponse = await fetch(
+    `https://history.openweathermap.org/data/2.5/history/city?lat={lat}&lon={lon}&type=hour&start={start}&end={end}&appid=${
+      import.meta.env.VITE_WEATHER_API_KEY
+    }&units=metric`
+  );
+};
+
 export default function Main() {
   const [searchInput, setSearchInput] = useState("");
   const [maxTemp, setMaxTemp] = useState("");
