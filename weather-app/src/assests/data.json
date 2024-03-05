@@ -1,32 +1,127 @@
 [
   {
     "id": 1,
-    "color": "red",
-    "temp": 105
+    "color": "#541528",
+    "temp": 41
   },
   {
     "id": 2,
-    "color": "blue",
-    "temp": 90
+    "color": "#901035",
+    "temp": 38
   },
   {
     "id": 3,
-    "color": "green",
-    "temp": 60
+    "color": "#a42244",
+    "temp": 35
   },
   {
     "id": 4,
-    "color": "red",
-    "temp": 105
+    "color": "#c43632",
+    "temp": 33
   },
   {
     "id": 5,
-    "color": "blue",
-    "temp": 90
+    "color": "#e54a26",
+    "temp": 30
   },
   {
     "id": 6,
-    "color": "green",
-    "temp": 60
+    "color": "#e65f25",
+    "temp": 28
+  },
+  {
+    "id": 7,
+    "color": "#ed8b2a",
+    "temp": 26
+  },
+  {
+    "id": 8,
+    "color": "#e49829",
+    "temp": 24
+  },
+  {
+    "id": 9,
+    "color": "#edba47",
+    "temp": 22
+  },
+  {
+    "id": 10,
+    "color": "#ead07a",
+    "temp": 20
+  },
+  {
+    "id": 11,
+    "color": "#a5a534",
+    "temp": 18
+  },
+  {
+    "id": 12,
+    "color": "#7aac53",
+    "temp": 16
+  },
+  {
+    "id": 13,
+    "color": "#5a9c4a",
+    "temp": 14
+  },
+  {
+    "id": 14,
+    "color": "#2d9162",
+    "temp": 12
+  },
+  {
+    "id": 15,
+    "color": "#7ac1b9",
+    "temp": 10
+  },
+  {
+    "id": 16,
+    "color": "#07a3c1",
+    "temp": 8
+  },
+  {
+    "id": 17,
+    "color": "#1286af",
+    "temp": 6
+  },
+  {
+    "id": 18,
+    "color": "#2b4369",
+    "temp": 4
+  },
+  {
+    "id": 19,
+    "color": "#48327c",
+    "temp": 2
+  },
+  {
+    "id": 20,
+    "color": "#864a90",
+    "temp": 0
+  },
+  {
+    "id": 21,
+    "color": "#834784",
+    "temp": -2
+  },
+  {
+    "id": 22,
+    "color": "#c08abe",
+    "temp": -4
+  },
+  {
+    "id": 23,
+    "color": "#c2a6ce",
+    "temp": -6
+  },
+  {
+    "id": 24,
+    "color": "#86abcf",
+    "temp": -8
+  },
+  {
+    "id": 25,
+    "color": "#a1bbc9",
+    "temp": -10
   }
 ]
