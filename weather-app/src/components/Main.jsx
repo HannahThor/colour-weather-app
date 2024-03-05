@@ -62,12 +62,17 @@ export default function Main() {
     console.log(historicalInfo);
     const pastMaxTemp = historicalInfo.daily.temperature_2m_max[0];
     console.log(pastMaxTemp);
+
+    const cityCorrectCase =
+      searchInput.charAt(0).toUpperCase() + searchInput.slice(1).toLowerCase();
+    console.log("city formated");
+
     setMaxTemp(temp_max);
     setMinTemp(temp_min);
     setYesterdayTemp(pastMaxTemp);
     setWeatherDescription(weatherDesc);
     setWeatherIcon(weatherDescIcon);
-    setCity(searchInput);
+    setCity(cityCorrectCase);
   };
 
   return (
