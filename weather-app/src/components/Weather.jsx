@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Weather({ city, minTemp, maxTemp }) {
+export default function Weather({ city, minTemp, maxTemp, yesterdayTemp }) {
   return (
     <>
       <article className="today">
@@ -18,7 +18,7 @@ export default function Weather({ city, minTemp, maxTemp }) {
       </article>
       <section className="yesterday">
         <h3>Colour of the day</h3>
-        <div className="colour-circle">7</div>
+        <div className="colour-circle">{yesterdayTemp}</div>
       </section>
     </>
   );

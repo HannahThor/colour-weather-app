@@ -40,6 +40,7 @@ export default function Main() {
   const [searchInput, setSearchInput] = useState("");
   const [maxTemp, setMaxTemp] = useState("");
   const [minTemp, setMinTemp] = useState("");
+  const [yesterdayTemp, setYesterdayTemp] = useState("");
 
   const searchCity = (e) => {
     setSearchInput(e.target.value);
@@ -55,6 +56,7 @@ export default function Main() {
     console.log(pastMaxTemp);
     setMaxTemp(temp_max);
     setMinTemp(temp_min);
+    setYesterdayTemp(pastMaxTemp);
   };
 
   return (
@@ -65,7 +67,12 @@ export default function Main() {
         searchCity={searchCity}
         handleClick={handleClick}
       />
-      <DisplayBox city={searchInput} maxTemp={maxTemp} minTemp={minTemp} />
+      <DisplayBox
+        city={searchInput}
+        maxTemp={maxTemp}
+        minTemp={minTemp}
+        yesterdayTemp={yesterdayTemp}
+      />
     </>
   );
 }
