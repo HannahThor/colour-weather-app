@@ -15,21 +15,25 @@ const location = async (city) => {
   const locationData = await locationResponse.json();
   console.log(locationData);
 
-  // const lat = locationData[0].lat;
+  const lat = locationData.coord.lat;
+  const lon = locationData.coord.lon;
+  console.log(lat, lon);
+
   const temp_max = locationData.main.temp_max;
   const temp_min = locationData.main.temp_min;
 
-  // const lon = locationData.coord.lon;
   console.log(temp_max, temp_min);
-  return { temp_max, temp_min };
+  return { temp_max, temp_min, lat, lon };
 };
 
-const historical = async (city) => {
+// open meteo for historical weather data
+const historical = async (lat, lon) => {
   const historicalResponse = await fetch(
-    `https://history.openweathermap.org/data/2.5/history/city?lat={lat}&lon={lon}&type=hour&start={start}&end={end}&appid=${
-      import.meta.env.VITE_WEATHER_API_KEY
-    }&units=metric`
+    `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=temperature_2m_max&past_days=1&forecast_days=1`
   );
+  const historicalData = await historicalResponse.json();
+  console.log(historicalData);
+  return historicalData;
 };
 
 export default function Main() {
@@ -42,8 +46,13 @@ export default function Main() {
   };
 
   const handleClick = async () => {
-    const { temp_max, temp_min } = await location(searchInput);
+    const { temp_max, temp_min, lat, lon } = await location(searchInput);
     console.log(temp_max, temp_min);
+
+    const historicalInfo = await historical(lat, lon);
+    console.log(historicalInfo);
+    const pastMaxTemp = historicalInfo.daily.temperature_2m_max[0];
+    console.log(pastMaxTemp);
     setMaxTemp(temp_max);
     setMinTemp(temp_min);
   };
