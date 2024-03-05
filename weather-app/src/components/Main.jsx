@@ -25,7 +25,9 @@ const location = async (city) => {
 };
 
 export default function Main() {
-  const [searchInput, setSearchInput] = useState("London");
+  const [searchInput, setSearchInput] = useState("");
+  const [maxTemp, setMaxTemp] = useState("");
+  const [minTemp, setMinTemp] = useState("");
 
   const searchCity = (e) => {
     setSearchInput(e.target.value);
@@ -34,6 +36,8 @@ export default function Main() {
   const handleClick = async () => {
     const { temp_max, temp_min } = await location(searchInput);
     console.log(temp_max, temp_min);
+    setMaxTemp(temp_max);
+    setMinTemp(temp_min);
   };
 
   return (
@@ -44,7 +48,7 @@ export default function Main() {
         searchCity={searchCity}
         handleClick={handleClick}
       />
-      <DisplayBox city={searchInput} />
+      <DisplayBox city={searchInput} maxTemp={maxTemp} minTemp={minTemp} />
     </>
   );
 }

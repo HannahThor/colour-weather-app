@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Weather({ city }) {
+export default function Weather({ city, minTemp, maxTemp }) {
   return (
     <>
       <article>
@@ -8,11 +8,11 @@ export default function Weather({ city }) {
         <img src="../public/images/clouds.png" />
         <p>Current weather description</p>
         <div>
-          <div>7</div>
+          <div>{maxTemp}</div>
           <div>Max temp</div>
         </div>
         <div>
-          <div>2</div>
+          <div>{minTemp}</div>
           <div>Min temp</div>
         </div>
       </article>
