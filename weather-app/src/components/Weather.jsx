@@ -12,7 +12,7 @@ export default function Weather({
     <>
       <article className="today">
         <h1>Today in {city}</h1>
-        <p>{weatherIcon} </p>
+        <img src={`https://openweathermap.org/img/wn/${weatherIcon}@2x.png`} />
         <p>{weatherDescription}</p>
         <div>
           <div>{maxTemp}</div>
