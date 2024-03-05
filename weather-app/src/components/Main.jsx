@@ -47,6 +47,7 @@ export default function Main() {
   const [yesterdayTemp, setYesterdayTemp] = useState("");
   const [weatherDescription, setWeatherDescription] = useState("");
   const [weatherIcon, setWeatherIcon] = useState("");
+  const [city, setCity] = useState("");
 
   const searchCity = (e) => {
     setSearchInput(e.target.value);
@@ -66,6 +67,7 @@ export default function Main() {
     setYesterdayTemp(pastMaxTemp);
     setWeatherDescription(weatherDesc);
     setWeatherIcon(weatherDescIcon);
+    setCity(searchInput);
   };
 
   return (
@@ -77,7 +79,7 @@ export default function Main() {
         handleClick={handleClick}
       />
       <DisplayBox
-        city={searchInput}
+        city={city}
         maxTemp={maxTemp}
         minTemp={minTemp}
         yesterdayTemp={yesterdayTemp}
