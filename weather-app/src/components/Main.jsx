@@ -21,9 +21,13 @@ const location = async (city) => {
 
   const temp_max = locationData.main.temp_max;
   const temp_min = locationData.main.temp_min;
-
   console.log(temp_max, temp_min);
-  return { temp_max, temp_min, lat, lon };
+
+  const weatherDesc = locationData.weather[0].description;
+  const weatherDescIcon = locationData.weather[0].icon;
+  console.log(weatherDesc, weatherDescIcon);
+
+  return { temp_max, temp_min, lat, lon, weatherDesc, weatherDescIcon };
 };
 
 // open meteo for historical weather data
@@ -41,13 +45,16 @@ export default function Main() {
   const [maxTemp, setMaxTemp] = useState("");
   const [minTemp, setMinTemp] = useState("");
   const [yesterdayTemp, setYesterdayTemp] = useState("");
+  const [weatherDescription, setWeatherDescription] = useState("");
+  const [weatherIcon, setWeatherIcon] = useState("");
 
   const searchCity = (e) => {
     setSearchInput(e.target.value);
   };
 
   const handleClick = async () => {
-    const { temp_max, temp_min, lat, lon } = await location(searchInput);
+    const { temp_max, temp_min, lat, lon, weatherDesc, weatherDescIcon } =
+      await location(searchInput);
     console.log(temp_max, temp_min);
 
     const historicalInfo = await historical(lat, lon);
@@ -57,6 +64,8 @@ export default function Main() {
     setMaxTemp(temp_max);
     setMinTemp(temp_min);
     setYesterdayTemp(pastMaxTemp);
+    setWeatherDescription(weatherDesc);
+    setWeatherIcon(weatherDescIcon);
   };
 
   return (
@@ -72,6 +81,8 @@ export default function Main() {
         maxTemp={maxTemp}
         minTemp={minTemp}
         yesterdayTemp={yesterdayTemp}
+        weatherDescription={weatherDescription}
+        weatherIcon={weatherIcon}
       />
     </>
   );

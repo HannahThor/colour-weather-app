@@ -1,12 +1,19 @@
 import React from "react";
 
-export default function Weather({ city, minTemp, maxTemp, yesterdayTemp }) {
+export default function Weather({
+  city,
+  minTemp,
+  maxTemp,
+  yesterdayTemp,
+  weatherDescription,
+  weatherIcon,
+}) {
   return (
     <>
       <article className="today">
         <h1>Today in {city}</h1>
-        <img src="/images/clouds.png" />
-        <p>Current weather description</p>
+        <p>{weatherIcon} </p>
+        <p>{weatherDescription}</p>
         <div>
           <div>{maxTemp}</div>
           <div>Max temp</div>
