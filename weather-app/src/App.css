@@ -43,6 +43,15 @@ button {
   flex-direction: column;
 }
 
+.weather-icon {
+  width: 300px;
+  height: 300px;
+}
+.tempToday {
+  display: flex;
+  flex-direction: row;
+}
+
 .yesterday {
   display: flex;
   align-items: center;
