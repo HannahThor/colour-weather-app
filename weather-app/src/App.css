@@ -57,21 +57,6 @@ button {
   align-items: center;
   justify-content: center;
 }
-
-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.colour-list {
-  /* color: aqua; */
-  height: 60px;
-  width: 100%;
-  overflow-y: scroll;
-}
-
 .colour-circle {
   background-color: green;
   display: flex;
@@ -80,4 +65,24 @@ footer {
   width: 50px;
   height: 50px;
   border-radius: 50%;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.colour-list {
+  height: 500px;
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.each-color {
+  flex: 0 0 50%;
+  height: 50px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }

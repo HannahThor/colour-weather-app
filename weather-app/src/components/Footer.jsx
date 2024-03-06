@@ -4,8 +4,8 @@ import palette from "../assests/data.json";
 export default function Footer() {
   const colourChart = palette.map((item) => {
     return (
-      <div key={item.id}>
-        <div>{item.color}</div>
+      <div className="each-color" key={item.id}>
+        <div style={{ backgroundColor: `${item.hex}` }}></div>
         <div>{item.temp}</div>
       </div>
     );
@@ -14,7 +14,9 @@ export default function Footer() {
   return (
     <footer>
       <h4>List of Colours</h4>
-      <ul className="colour-list">{colourChart}</ul>
+      <div className="container">
+        <ul className="colour-list">{colourChart}</ul>
+      </div>
     </footer>
   );
 }
