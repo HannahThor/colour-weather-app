@@ -10,6 +10,7 @@ export default function DisplayBox({
   yesterdayTemp,
   weatherDescription,
   weatherIcon,
+  palette,
 }) {
   return (
     <main>
@@ -23,6 +24,7 @@ export default function DisplayBox({
           yesterdayTemp={yesterdayTemp}
           weatherDescription={weatherDescription}
           weatherIcon={weatherIcon}
+          palette={palette}
         />
       )}
     </main>

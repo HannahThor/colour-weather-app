@@ -1,4 +1,5 @@
 import React from "react";
+import { useState, useEffect } from "react";
 
 export default function Weather({
   city,
@@ -7,7 +8,25 @@ export default function Weather({
   yesterdayTemp,
   weatherDescription,
   weatherIcon,
+  palette,
 }) {
+  const [yesterdayHex, setYesterdayHex] = useState("green");
+
+  useEffect(() => {
+    for (let i = 0; i < palette.length; i++) {
+      if (yesterdayTemp >= palette[i].temp) {
+        setYesterdayHex(palette[i].hex);
+        console.log(
+          "yesterday temp:",
+          yesterdayTemp,
+          "hex colour:",
+          palette[i].hex
+        );
+        return;
+      }
+    }
+  }, [yesterdayTemp]);
+
   return (
     <>
       <article className="today">
@@ -30,7 +49,12 @@ export default function Weather({
       </article>
       <section className="yesterday">
         <h3>Colour of the day</h3>
-        <div className="colour-circle">{yesterdayTemp}</div>
+        <div
+          style={{ backgroundColor: `${yesterdayHex}` }}
+          className="colour-circle"
+        >
+          {yesterdayTemp}
+        </div>
       </section>
     </>
   );

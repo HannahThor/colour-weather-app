@@ -1,7 +1,6 @@
 import React from "react";
-import palette from "../assests/data.json";
 
-export default function Footer() {
+export default function Footer({ palette }) {
   const colourChart = palette.map((item) => {
     return (
       <div className="each-color" key={item.id}>

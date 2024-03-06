@@ -40,7 +40,7 @@ const historical = async (lat, lon) => {
   return historicalData;
 };
 
-export default function Main() {
+export default function Main({ palette }) {
   const [searchInput, setSearchInput] = useState("");
   const [maxTemp, setMaxTemp] = useState("");
   const [minTemp, setMinTemp] = useState("");
@@ -90,6 +90,7 @@ export default function Main() {
         yesterdayTemp={yesterdayTemp}
         weatherDescription={weatherDescription}
         weatherIcon={weatherIcon}
+        palette={palette}
       />
     </>
   );
