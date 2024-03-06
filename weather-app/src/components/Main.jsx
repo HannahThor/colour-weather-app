@@ -47,7 +47,7 @@ export default function Main() {
   const [yesterdayTemp, setYesterdayTemp] = useState("");
   const [weatherDescription, setWeatherDescription] = useState("");
   const [weatherIcon, setWeatherIcon] = useState("");
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState(null);
 
   const searchCity = (e) => {
     setSearchInput(e.target.value);
