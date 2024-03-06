@@ -6,7 +6,7 @@ export default function Footer() {
     return (
       <div className="each-color" key={item.id}>
         <div style={{ backgroundColor: `${item.hex}` }}></div>
-        <div>{item.temp}</div>
+        <div>{item.temp}°c</div>
       </div>
     );
   });
