@@ -12,15 +12,20 @@ export default function Weather({
     <>
       <article className="today">
         <h1>Today in {city}</h1>
-        <img src={`https://openweathermap.org/img/wn/${weatherIcon}@2x.png`} />
+        <img
+          className="weather-icon"
+          src={`/images/weather/${weatherIcon}.png`}
+        />
         <p>{weatherDescription}</p>
-        <div>
-          <div>{maxTemp}</div>
-          <div>Max temp</div>
-        </div>
-        <div>
-          <div>{minTemp}</div>
-          <div>Min temp</div>
+        <div className="tempToday">
+          <div>
+            <p>{maxTemp}</p>
+            <p>Max temp</p>
+          </div>
+          <div>
+            <p>{minTemp}</p>
+            <p>Min temp</p>
+          </div>
         </div>
       </article>
       <section className="yesterday">
