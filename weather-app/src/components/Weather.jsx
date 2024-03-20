@@ -39,7 +39,7 @@ export default function Weather({
         <p>{weatherDescription}</p>
         <div className="tempToday">
           <div>
-            <p>{maxTemp} °C TEST</p>
+            <p>{maxTemp} °C</p>
             <p>Max temp</p>
           </div>
           <div>
