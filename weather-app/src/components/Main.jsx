@@ -2,6 +2,7 @@ import DisplayBox from "./DisplayBox";
 import Header from "./Header";
 import Search from "./Search";
 import { useState } from "react";
+import Switch from "./switch/Switch.jsx";
 
 const location = async (city) => {
   console.log(import.meta.env);
@@ -77,6 +78,7 @@ export default function Main({ palette }) {
 
   return (
     <>
+      <Switch />
       <Header />
       <Search
         location={location}
