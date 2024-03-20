@@ -26,7 +26,7 @@ export default function Weather({
         return;
       }
     }
-  }, [yesterdayTemp, isToggled]);
+  }, [yesterdayTemp]);
 
   return (
     <>

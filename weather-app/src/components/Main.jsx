@@ -1,7 +1,7 @@
 import DisplayBox from "./DisplayBox";
 import Header from "./Header";
 import Search from "./Search";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Switch from "./switch/Switch.jsx";
 
 const location = async (city) => {
@@ -49,6 +49,8 @@ export default function Main({ palette }) {
   const [weatherDescription, setWeatherDescription] = useState("");
   const [weatherIcon, setWeatherIcon] = useState("");
   const [city, setCity] = useState(null);
+  const [pastMaxTemp, setPastMaxTemp] = useState(0);
+  const [pastMinTemp, setPastMinTemp] = useState(0);
 
   const [isToggled, setIsToggled] = useState(false);
 
@@ -63,9 +65,9 @@ export default function Main({ palette }) {
 
     const historicalInfo = await historical(lat, lon);
     console.log(historicalInfo);
-    const pastMaxTemp = historicalInfo.daily.temperature_2m_max[0];
+    let pastMaxTemp = historicalInfo.daily.temperature_2m_max[0];
     console.log(pastMaxTemp);
-    const pastMinTemp = historicalInfo.daily.temperature_2m_min[0];
+    let pastMinTemp = historicalInfo.daily.temperature_2m_min[0];
     console.log(pastMinTemp);
 
     const cityCorrectCase =
@@ -74,11 +76,19 @@ export default function Main({ palette }) {
 
     setMaxTemp(temp_max);
     setMinTemp(temp_min);
+    setPastMaxTemp(pastMaxTemp);
+    setPastMinTemp(pastMinTemp);
     isToggled ? setYesterdayTemp(pastMaxTemp) : setYesterdayTemp(pastMinTemp);
     setWeatherDescription(weatherDesc);
     setWeatherIcon(weatherDescIcon);
     setCity(cityCorrectCase);
   };
+
+  useEffect(
+    () =>
+      isToggled ? setYesterdayTemp(pastMaxTemp) : setYesterdayTemp(pastMinTemp),
+    [isToggled]
+  );
 
   return (
     <>
