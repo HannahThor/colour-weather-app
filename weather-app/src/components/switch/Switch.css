@@ -3,14 +3,13 @@
   display: inline-block;
   width: 60px;
   height: 34px;
+  padding: 0;
 }
-
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
-
 .slider {
   position: absolute;
   cursor: pointer;
@@ -18,10 +17,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  border-radius: 34px;
   background-color: #ccc;
+  border-radius: 34px;
 }
-
 .slider:before {
   position: absolute;
   content: "";
@@ -30,14 +28,11 @@
   left: 4px;
   bottom: 4px;
   background-color: white;
-  transition: 0.4s;
   border-radius: 50%;
 }
-
 input:checked + .slider {
   background-color: blue;
 }
-
 input:checked + .slider:before {
   transform: translateX(26px);
 }
