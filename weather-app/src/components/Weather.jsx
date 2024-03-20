@@ -9,6 +9,7 @@ export default function Weather({
   weatherDescription,
   weatherIcon,
   palette,
+  isToggled,
 }) {
   const [yesterdayHex, setYesterdayHex] = useState("green");
 
@@ -25,7 +26,7 @@ export default function Weather({
         return;
       }
     }
-  }, [yesterdayTemp]);
+  }, [yesterdayTemp, isToggled]);
 
   return (
     <>
@@ -38,7 +39,7 @@ export default function Weather({
         <p>{weatherDescription}</p>
         <div className="tempToday">
           <div>
-            <p>{maxTemp} °C hello</p>
+            <p>{maxTemp} °C</p>
             <p>Max temp</p>
           </div>
           <div>
@@ -53,7 +54,7 @@ export default function Weather({
           style={{ backgroundColor: `${yesterdayHex}` }}
           className="colour-circle"
         >
-          {yesterdayTemp}
+          {yesterdayTemp}°C
         </div>
       </section>
     </>

@@ -34,7 +34,7 @@ const location = async (city) => {
 // open meteo for historical weather data
 const historical = async (lat, lon) => {
   const historicalResponse = await fetch(
-    `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=temperature_2m_max&past_days=1&forecast_days=1`
+    `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=temperature_2m_max&daily=temperature_2m_min&past_days=1&forecast_days=1`
   );
   const historicalData = await historicalResponse.json();
   console.log(historicalData);
@@ -50,6 +50,8 @@ export default function Main({ palette }) {
   const [weatherIcon, setWeatherIcon] = useState("");
   const [city, setCity] = useState(null);
 
+  const [isToggled, setIsToggled] = useState(false);
+
   const searchCity = (e) => {
     setSearchInput(e.target.value);
   };
@@ -63,6 +65,8 @@ export default function Main({ palette }) {
     console.log(historicalInfo);
     const pastMaxTemp = historicalInfo.daily.temperature_2m_max[0];
     console.log(pastMaxTemp);
+    const pastMinTemp = historicalInfo.daily.temperature_2m_min[0];
+    console.log(pastMinTemp);
 
     const cityCorrectCase =
       searchInput.charAt(0).toUpperCase() + searchInput.slice(1).toLowerCase();
@@ -70,7 +74,7 @@ export default function Main({ palette }) {
 
     setMaxTemp(temp_max);
     setMinTemp(temp_min);
-    setYesterdayTemp(pastMaxTemp);
+    isToggled ? setYesterdayTemp(pastMaxTemp) : setYesterdayTemp(pastMinTemp);
     setWeatherDescription(weatherDesc);
     setWeatherIcon(weatherDescIcon);
     setCity(cityCorrectCase);
@@ -78,7 +82,7 @@ export default function Main({ palette }) {
 
   return (
     <>
-      <Switch />
+      <Switch isToggled={isToggled} onToggle={() => setIsToggled(!isToggled)} />
       <Header />
       <Search
         location={location}
@@ -93,6 +97,7 @@ export default function Main({ palette }) {
         weatherDescription={weatherDescription}
         weatherIcon={weatherIcon}
         palette={palette}
+        isToggled={isToggled}
       />
     </>
   );

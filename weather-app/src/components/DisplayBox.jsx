@@ -11,6 +11,7 @@ export default function DisplayBox({
   weatherDescription,
   weatherIcon,
   palette,
+  isToggled,
 }) {
   return (
     <main>
@@ -25,6 +26,7 @@ export default function DisplayBox({
           weatherDescription={weatherDescription}
           weatherIcon={weatherIcon}
           palette={palette}
+          isToggled={isToggled}
         />
       )}
     </main>
