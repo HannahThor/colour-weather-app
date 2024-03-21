@@ -12,13 +12,13 @@ export default function Yesterday({
       <div
         style={{ backgroundColor: `${yesterdayHex}` }}
         className="colour-circle"
-      >
-        {yesterdayTemp}°C
+      ></div>
+      <div>
+        <div className="card-name">Colour of the day</div>
+        <p className="card-color">Yesterdays Temp: {yesterdayTemp}°C</p>
+        <p className="card-color">Thread: {yesterdayThread}</p>
+        <p className="card-color">Yarn: {yesterdayYarn}</p>
       </div>
-      <h3>Colour of the day</h3>
-      <p>
-        {yesterdayThread} {yesterdayYarn}
-      </p>
     </section>
   );
 }

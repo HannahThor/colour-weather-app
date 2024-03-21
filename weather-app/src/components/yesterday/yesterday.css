@@ -1,14 +1,46 @@
 .yesterday-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 100%;
+  width: 30%;
+  align-content: center;
+  position: relative;
+  top: 36%;
+  left: 36%;
+  display: block;
 }
 .colour-circle {
   background-color: green;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  height: 410px;
+  width: 330px;
+  float: left;
+  margin-left: -90%;
+  margin-top: 3.5%;
+  -webkit-box-shadow: 0 3px 2px #777;
+  -moz-box-shadow: 0 3px 2px #777;
+  box-shadow: 0 3px 2px #777;
+}
+
+.card-color {
+  color: #000;
+  font-family: Pantone;
+  font-size: 0.8em;
+  margin-top: 1%;
+  letter-spacing: -1px;
+  width: 100%;
+}
+
+.card-name {
+  height: 18%;
+  width: 98.2%;
+  background-color: white;
+  margin-top: 100%;
+  color: #000;
+  font-family: Pantone;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: left;
+  font-size: 2em;
+  padding-left: 6px;
+  padding-top: 8px;
+  border-bottom: 0 none;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.46);
 }
