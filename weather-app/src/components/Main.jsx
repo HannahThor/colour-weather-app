@@ -70,12 +70,16 @@ export default function Main({ palette }) {
     let pastMinTemp = historicalInfo.daily.temperature_2m_min[0];
     console.log(pastMinTemp);
 
+    // Rounding temps to nearest whole number
+    const roundedTempMax = Math.round(temp_max);
+    const roundedTempMin = Math.round(temp_min);
+
     const cityCorrectCase =
       searchInput.charAt(0).toUpperCase() + searchInput.slice(1).toLowerCase();
     console.log("city formated");
 
-    setMaxTemp(temp_max);
-    setMinTemp(temp_min);
+    setMaxTemp(roundedTempMax);
+    setMinTemp(roundedTempMin);
     setPastMaxTemp(pastMaxTemp);
     setPastMinTemp(pastMinTemp);
     isToggled ? setYesterdayTemp(pastMaxTemp) : setYesterdayTemp(pastMinTemp);
