@@ -1,7 +1,12 @@
 import React from "react";
 import "./yesterday.css";
 
-export default function Yesterday({ yesterdayTemp, yesterdayHex }) {
+export default function Yesterday({
+  yesterdayTemp,
+  yesterdayHex,
+  yesterdayThread,
+  yesterdayYarn,
+}) {
   return (
     <section className="yesterday-card">
       <div
@@ -11,7 +16,9 @@ export default function Yesterday({ yesterdayTemp, yesterdayHex }) {
         {yesterdayTemp}°C
       </div>
       <h3>Colour of the day</h3>
-      <p></p>
+      <p>
+        {yesterdayThread} {yesterdayYarn}
+      </p>
     </section>
   );
 }

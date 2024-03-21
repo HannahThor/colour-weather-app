@@ -12,12 +12,16 @@ export default function Weather({
   palette,
   isToggled,
 }) {
-  const [yesterdayHex, setYesterdayHex] = useState("green");
+  const [yesterdayHex, setYesterdayHex] = useState("");
+  const [yesterdayThread, setYesterdayThread] = useState("");
+  const [yesterdayYarn, setYesterdayYarn] = useState("");
 
   useEffect(() => {
     for (let i = 0; i < palette.length; i++) {
       if (yesterdayTemp >= palette[i].temp) {
         setYesterdayHex(palette[i].hex);
+        setYesterdayThread(palette[i].thread);
+        setYesterdayYarn(palette[i].yarn);
         console.log(
           "yesterday temp:",
           yesterdayTemp,
@@ -49,7 +53,12 @@ export default function Weather({
           </div>
         </div>
       </article>
-      <Yesterday yesterdayTemp={yesterdayTemp} yesterdayHex={yesterdayHex} />
+      <Yesterday
+        yesterdayTemp={yesterdayTemp}
+        yesterdayHex={yesterdayHex}
+        yesterdayThread={yesterdayThread}
+        yesterdayYarn={yesterdayYarn}
+      />
     </>
   );
 }
