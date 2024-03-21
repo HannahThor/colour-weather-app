@@ -1,5 +1,6 @@
 import React from "react";
 import "./yesterday.css";
+import { Link } from "react";
 
 export default function Yesterday({
   yesterdayTemp,
@@ -16,8 +17,18 @@ export default function Yesterday({
       <div>
         <div className="card-name">Colour of the day</div>
         <p className="card-color">Yesterdays Temp: {yesterdayTemp}°C</p>
-        <p className="card-color">Thread: {yesterdayThread}</p>
-        <p className="card-color">Yarn: {yesterdayYarn}</p>
+        <p className="card-color">
+          <a href="https://www.dmc.com/GB/en-GB/products/other-embroidery-thread">
+            Thread:{" "}
+          </a>
+          {yesterdayThread}
+        </p>
+        <p className="card-color">
+          <a href="https://www.dmc.com/GB/en-GB/products/knitty-yarn/knitty-4">
+            Yarn:{" "}
+          </a>
+          {yesterdayYarn}
+        </p>
       </div>
     </section>
   );
