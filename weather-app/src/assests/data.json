@@ -3,150 +3,208 @@
     "id": 1,
     "temp": 41,
     "hex": "#541528",
-    "color": "red"
+    "color": "red",
+    "thread": 498,
+    "yarn": "K841"
   },
   {
     "id": 2,
     "temp": 38,
     "hex": "#901035",
-    "color": "red"
+    "color": "red",
+    "thread": 3685,
+    "yarn": "K700"
   },
   {
     "id": 3,
     "temp": 35,
     "hex": "#a42244",
-    "color": "red"
+    "color": "red",
+    "thread": 321,
+    "yarn": "K617"
   },
   {
     "id": 4,
     "temp": 33,
     "hex": "#c43632",
-    "color": "red"
+    "color": "red",
+    "thread": 606,
+    "yarn": "K977"
   },
   {
     "id": 5,
     "temp": 30,
     "hex": "#e54a26",
-    "color": "orange"
+    "color": "orange",
+    "thread": 900,
+    "yarn": "K635"
   },
   {
     "id": 6,
     "temp": 28,
     "hex": "#e65f25",
-    "color": "orange"
+    "color": "orange",
+    "thread": 721,
+    "yarn": "K728"
   },
   {
     "id": 7,
     "temp": 26,
     "hex": "#ed8b2a",
-    "color": "orange"
+    "color": "orange",
+    "thread": 742,
+    "yarn": "K647"
   },
   {
     "id": 8,
     "temp": 24,
     "hex": "#e49829",
-    "color": "orange"
+    "color": "orange",
+    "thread": 783,
+    "yarn": "K587"
   },
   {
     "id": 9,
     "temp": 22,
     "hex": "#edba47",
-    "color": "yellow"
+    "color": "yellow",
+    "thread": 444,
+    "yarn": "K978"
   },
   {
     "id": 10,
     "temp": 20,
     "hex": "#ead07a",
-    "color": "yellow"
+    "color": "yellow",
+    "thread": 445,
+    "yarn": "K819"
   },
   {
     "id": 11,
     "temp": 18,
     "hex": "#a5a534",
-    "color": "green"
+    "color": "green",
+    "thread": 472,
+    "yarn": "K882"
   },
   {
     "id": 12,
     "temp": 16,
     "hex": "#7aac53",
-    "color": "green"
+    "color": "green",
+    "thread": 702,
+    "yarn": "K699"
   },
   {
     "id": 13,
     "temp": 14,
     "hex": "#5a9c4a",
-    "color": "green"
+    "color": "green",
+    "thread": 904,
+    "yarn": "K916"
   },
   {
     "id": 14,
     "temp": 12,
     "hex": "#2d9162",
-    "color": "green"
+    "color": "green",
+    "thread": 3346,
+    "yarn": "K839"
   },
   {
     "id": 15,
     "temp": 10,
     "hex": "#7ac1b9",
-    "color": "blue"
+    "color": "blue",
+    "thread": 954,
+    "yarn": "K607"
   },
   {
     "id": 16,
     "temp": 8,
     "hex": "#07a3c1",
-    "color": "blue"
+    "color": "blue",
+    "thread": 943,
+    "yarn": "K994"
   },
   {
     "id": 17,
     "temp": 6,
     "hex": "#1286af",
-    "color": "blue"
+    "color": "blue",
+    "thread": 826,
+    "yarn": "K667"
   },
   {
     "id": 18,
     "temp": 4,
     "hex": "#2b4369",
-    "color": "blue"
+    "color": "blue",
+    "thread": 820,
+    "yarn": "K979"
   },
   {
     "id": 19,
     "temp": 2,
     "hex": "#48327c",
-    "color": "purple"
+    "color": "purple",
+    "thread": 550,
+    "yarn": "K971"
   },
   {
     "id": 20,
     "temp": 0,
     "hex": "#864a90",
-    "color": "purple"
+    "color": "purple",
+    "thread": 552,
+    "yarn": "K840"
   },
   {
     "id": 21,
     "temp": -2,
     "hex": "#834784",
-    "color": "purple"
+    "color": "purple",
+    "thread": 3687,
+    "yarn": "K701"
   },
   {
     "id": 22,
     "temp": -4,
     "hex": "#c08abe",
-    "color": "purple"
+    "color": "purple",
+    "thread": 209,
+    "yarn": "K669"
   },
   {
     "id": 23,
     "temp": -6,
     "hex": "#c2a6ce",
-    "color": "purple"
+    "color": "purple",
+    "thread": 211,
+    "yarn": "K850"
   },
   {
     "id": 24,
     "temp": -8,
     "hex": "#86abcf",
-    "color": "grey"
+    "color": "grey",
+    "thread": 827,
+    "yarn": "K854"
   },
   {
     "id": 25,
     "temp": -10,
     "hex": "#a1bbc9",
-    "color": "grey"
+    "color": "grey",
+    "thread": 828,
+    "yarn": "K814"
+  },
+  {
+    "id": 26,
+    "temp": -25,
+    "hex": "#F8F8FS",
+    "color": "white",
+    "thread": "B5200",
+    "yarn": "K961"
   }
 ]
