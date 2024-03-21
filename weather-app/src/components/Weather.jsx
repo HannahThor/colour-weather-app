@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import Yesterday from "./yesterday/yesterday";
 
 export default function Weather({
   city,
@@ -48,15 +49,7 @@ export default function Weather({
           </div>
         </div>
       </article>
-      <section className="yesterday">
-        <h3>Colour of the day</h3>
-        <div
-          style={{ backgroundColor: `${yesterdayHex}` }}
-          className="colour-circle"
-        >
-          {yesterdayTemp}°C
-        </div>
-      </section>
+      <Yesterday yesterdayTemp={yesterdayTemp} yesterdayHex={yesterdayHex} />
     </>
   );
 }
