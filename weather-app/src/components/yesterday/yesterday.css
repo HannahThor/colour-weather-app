@@ -1,46 +1,47 @@
-.yesterday-card {
-  height: 100%;
-  width: 30%;
-  align-content: center;
-  position: relative;
-  top: 36%;
-  left: 36%;
-  display: block;
-}
-.colour-circle {
-  background-color: green;
-  height: 410px;
-  width: 330px;
-  float: left;
-  margin-left: -90%;
-  margin-top: 3.5%;
-  -webkit-box-shadow: 0 3px 2px #777;
-  -moz-box-shadow: 0 3px 2px #777;
-  box-shadow: 0 3px 2px #777;
+@font-face {
+  font-family: Pantone;
+  src: url(//db.onlinewebfonts.com/t/19f8d00e507858a750cc961c7e45562c.woff);
 }
 
+.yesterday-card {
+  width: 80px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  background-color: antiquewhite;
+  border-radius: 5px;
+}
+.colour-box {
+  background-color: green;
+  width: 60px;
+  height: 60px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.card-name,
+.card-color,
+.links {
+  padding: 0;
+  text-align: left;
+  margin: 0;
+}
+.card-name,
 .card-color {
-  color: #000;
-  font-family: Pantone;
-  font-size: 0.8em;
-  margin-top: 1%;
-  letter-spacing: -1px;
-  width: 100%;
+  font-size: smaller;
+  padding-top: 2px;
+}
+
+.thread,
+.yarn,
+a {
+  font-size: xx-small;
+  list-style-type: none;
+  margin: 0;
+  padding: 1px;
 }
 
 .card-name {
-  height: 18%;
-  width: 98.2%;
-  background-color: white;
-  margin-top: 100%;
-  color: #000;
-  font-family: Pantone;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-align: left;
-  font-size: 2em;
-  padding-left: 6px;
-  padding-top: 8px;
-  border-bottom: 0 none;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.46);
+  font-weight: bold;
+  padding-top: 4px;
 }

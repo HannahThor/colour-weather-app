@@ -96,7 +96,7 @@ export default function Main({ palette }) {
 
   return (
     <>
-      <Switch isToggled={isToggled} onToggle={() => setIsToggled(!isToggled)} />
+      {/* <Switch isToggled={isToggled} onToggle={() => setIsToggled(!isToggled)} /> */}
       <Header />
       <Search
         location={location}

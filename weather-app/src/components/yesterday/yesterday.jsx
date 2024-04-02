@@ -12,24 +12,31 @@ export default function Yesterday({
     <section className="yesterday-card">
       <div
         style={{ backgroundColor: `${yesterdayHex}` }}
-        className="colour-circle"
+        className="colour-box"
       ></div>
-      <div>
-        <div className="card-name">Colour of the day</div>
-        <p className="card-color">Yesterdays Temp: {yesterdayTemp}°C</p>
-        <p className="card-color">
-          <a href="https://www.dmc.com/GB/en-GB/products/other-embroidery-thread">
-            Thread:{" "}
+
+      <h3 className="card-name">COLOUR</h3>
+      <p className="card-color">{yesterdayTemp}°C</p>
+      <ul className="links">
+        <li className="thread">
+          <a
+            href="https://www.dmc.com/GB/en-GB/products/other-embroidery-thread"
+            target="_blank"
+          >
+            Thread:
           </a>
           {yesterdayThread}
-        </p>
-        <p className="card-color">
-          <a href="https://www.dmc.com/GB/en-GB/products/knitty-yarn/knitty-4">
-            Yarn:{" "}
+        </li>
+        <li className="yarn">
+          <a
+            href="https://www.dmc.com/GB/en-GB/products/knitty-yarn/knitty-4"
+            target="_blank"
+          >
+            Yarn:
           </a>
           {yesterdayYarn}
-        </p>
-      </div>
+        </li>
+      </ul>
     </section>
   );
 }
