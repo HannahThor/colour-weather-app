@@ -94,7 +94,7 @@ export default function Main({ palette }) {
   );
 
   return (
-    <>
+    <main className="main-display">
       {/* <Switch isToggled={isToggled} onToggle={() => setIsToggled(!isToggled)} /> */}
       <Search
         location={location}
@@ -111,6 +111,6 @@ export default function Main({ palette }) {
         palette={palette}
         isToggled={isToggled}
       />
-    </>
+    </main>
   );
 }
