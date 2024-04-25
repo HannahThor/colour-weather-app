@@ -1,5 +1,5 @@
 import DisplayBox from "./DisplayBox";
-import Header from "./Header";
+import Header from "./header/Header";
 import Search from "./Search";
 import { useEffect, useState } from "react";
 import Switch from "./switch/Switch.jsx";

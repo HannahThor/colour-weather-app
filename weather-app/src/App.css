@@ -9,25 +9,6 @@ body {
   background-color: white;
 }
 
-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  padding-bottom: 20px;
-  padding-top: 20px;
-}
-
-.yarn {
-  margin: 0;
-  height: 40px;
-  width: 40px;
-}
-
-.main-heading {
-  margin: 0;
-}
-
 .form {
   display: flex;
   align-items: center;
