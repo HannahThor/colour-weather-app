@@ -1,5 +1,4 @@
 import DisplayBox from "./DisplayBox";
-import Header from "./header/Header";
 import Search from "./Search";
 import { useEffect, useState } from "react";
 import Switch from "./switch/Switch.jsx";
@@ -97,7 +96,6 @@ export default function Main({ palette }) {
   return (
     <>
       {/* <Switch isToggled={isToggled} onToggle={() => setIsToggled(!isToggled)} /> */}
-      <Header />
       <Search
         location={location}
         searchCity={searchCity}
