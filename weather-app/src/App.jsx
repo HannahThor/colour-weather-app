@@ -1,5 +1,5 @@
 import "./App.css";
-import Footer from "./components/Footer";
+import Footer from "./components/footer/Footer";
 import Main from "./components/Main";
 import palette from "../src/assests/data.json";
 
