@@ -9,4 +9,4 @@ Currently, two official plugins are available:
 
 ## by Kit and Hannah
 
-## Crafting App
+# Crafting App
