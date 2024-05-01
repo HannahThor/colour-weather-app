@@ -35,6 +35,7 @@ input {
 
 .search-img {
   width: 25px;
+  padding: 0;
 }
 
 .today {
