@@ -1,6 +1,6 @@
 import React from "react";
 import "./yesterday.css";
-import { Link } from "react";
+import { Link, useState } from "react";
 
 export default function Yesterday({
   yesterdayTemp,
@@ -8,13 +8,22 @@ export default function Yesterday({
   yesterdayThread,
   yesterdayYarn,
 }) {
+  const [visible, setVisible] = useState("hidden");
+
+  const handleMouseOver = () => setVisible("visible");
+  const handleMouseOut = () => setVisible("hidden");
+
   return (
     <section className="yesterday-card">
       <div
         style={{ backgroundColor: `${yesterdayHex}` }}
         className="colour-box"
+        onMouseOver={handleMouseOver}
+        onMouseOut={handleMouseOut}
       >
-        <p className="card-color">{yesterdayTemp}°C</p>
+        <p style={{ visibility: `${visible}` }} className="card-color">
+          {yesterdayTemp}°C
+        </p>
       </div>
 
       <div className="card-info">
