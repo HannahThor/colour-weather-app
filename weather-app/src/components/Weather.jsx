@@ -36,7 +36,7 @@ export default function Weather({
   return (
     <>
       <article className="today">
-        <h1>Today in {city}</h1>
+        <h1 className="today-in">Today in {city}</h1>
         <img
           className="weather-icon"
           src={`/images/weather/${weatherIcon}.png`}

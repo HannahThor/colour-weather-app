@@ -20,5 +20,6 @@ header {
 }
 
 .main-heading {
-  margin: 0;
+  margin: auto;
+  font-size: 7.2vw;
 }
