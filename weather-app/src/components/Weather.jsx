@@ -52,13 +52,13 @@ export default function Weather({
             <p>Min temp</p>
           </div>
         </div>
+        <Yesterday
+          yesterdayTemp={yesterdayTemp}
+          yesterdayHex={yesterdayHex}
+          yesterdayThread={yesterdayThread}
+          yesterdayYarn={yesterdayYarn}
+        />
       </article>
-      <Yesterday
-        yesterdayTemp={yesterdayTemp}
-        yesterdayHex={yesterdayHex}
-        yesterdayThread={yesterdayThread}
-        yesterdayYarn={yesterdayYarn}
-      />
     </>
   );
 }
