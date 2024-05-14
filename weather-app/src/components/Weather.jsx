@@ -44,12 +44,10 @@ export default function Weather({
         <p>{weatherDescription}</p>
         <div className="tempToday">
           <div>
-            <p>{maxTemp} °C</p>
-            <p>Max temp</p>
+            <p>H: {maxTemp}°C</p>
           </div>
           <div>
-            <p>{minTemp} °C</p>
-            <p>Min temp</p>
+            <p>L: {minTemp}°C</p>
           </div>
         </div>
         <Yesterday

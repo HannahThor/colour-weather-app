@@ -5,10 +5,10 @@ header {
   /* margin: 0; */
   /* margin-top: 1vh; */
   padding-bottom: 10px;
-  /* padding-top: 10px; */
+  padding-top: 10px;
 
   border: 2px solid black;
-  height: 6vh;
+  height: 7vh;
 
   background: rgba(255, 255, 255, 0.29);
   border-radius: 16px;
@@ -25,5 +25,5 @@ header {
 
 .main-heading {
   margin: auto;
-  font-size: 7.2vw;
+  font-size: clamp(16px, 6vw, 40px);
 }

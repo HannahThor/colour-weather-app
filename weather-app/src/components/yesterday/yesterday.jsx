@@ -13,11 +13,13 @@ export default function Yesterday({
       <div
         style={{ backgroundColor: `${yesterdayHex}` }}
         className="colour-box"
-      ></div>
+      >
+        <p className="card-color">{yesterdayTemp}°C</p>
+      </div>
 
       <div className="card-info">
         <h3 className="card-name">COLOUR</h3>
-        <p className="card-color">{yesterdayTemp}°C</p>
+
         <ul className="links">
           <li className="thread">
             <a

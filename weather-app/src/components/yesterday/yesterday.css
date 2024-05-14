@@ -37,6 +37,13 @@
 .card-color {
   font-size: smaller;
   padding-top: 2px;
+  visibility: hidden;
+}
+
+.card-color:hover {
+  font-size: smaller;
+  padding-top: 2px;
+  visibility: visible;
 }
 
 .thread,
