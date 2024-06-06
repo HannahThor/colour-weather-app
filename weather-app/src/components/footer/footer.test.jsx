@@ -32,4 +32,6 @@ test("footer render correctly", () => {
   render(<Footer palette={palette} />);
   const header = screen.getByRole("heading", { level: 4 });
   expect(header).toHaveTextContent("List of Colours");
+  const cards = screen.queryAllByRole("listitem");
+  expect(cards.length).toBe(3);
 });
