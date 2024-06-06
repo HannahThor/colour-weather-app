@@ -36,4 +36,8 @@ test("footer render correctly", () => {
   expect(cards.length).toBe(3);
   const singleCard = screen.getAllByRole("listitem")[0].firstChild;
   expect(singleCard).toHaveStyle({ backgroundColor: "#541528" });
+  const tempWord = screen.getAllByRole("listitem")[0];
+  expect(tempWord).toHaveTextContent("TEMP");
+  const degrees = screen.getAllByRole("listitem")[0];
+  expect(degrees).toHaveTextContent("41°c");
 });
