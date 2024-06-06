@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import InitialDisplay from "./InitialDisplay";
 
-test("render correctly", () => {
+test("initial display render correctly", () => {
   render(<InitialDisplay />);
   const initialText = screen.getByRole("paragraph");
   expect(initialText).toHaveTextContent(

@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import Footer from "./Footer";
 
-test("footer render correctly", () => {
+test("footer renders correctly", () => {
   const palette = [
     {
       id: 1,
