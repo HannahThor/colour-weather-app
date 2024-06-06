@@ -1,7 +1,6 @@
-import DisplayBox from "./DisplayBox";
-import Search from "./Search";
+import DisplayBox from "../DisplayBox/DisplayBox";
+import Search from "../Search/Search.jsx";
 import { useEffect, useState } from "react";
-import Switch from "./switch/Switch.jsx";
 
 const location = async (city) => {
   console.log(import.meta.env);

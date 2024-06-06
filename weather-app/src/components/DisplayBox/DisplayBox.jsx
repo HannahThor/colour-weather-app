@@ -1,6 +1,6 @@
 import React from "react";
-import Weather from "./Weather";
-import InitialDisplay from "./InitialDisplay";
+import Weather from "../Weather/Weather";
+import InitialDisplay from "../InitialDisplay/InitialDisplay";
 // import { useState } from "react";
 
 export default function DisplayBox({

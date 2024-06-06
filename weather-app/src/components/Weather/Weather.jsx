@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import Yesterday from "./yesterday/yesterday";
+import Yesterday from "../yesterday/yesterday";
 
 export default function Weather({
   city,
