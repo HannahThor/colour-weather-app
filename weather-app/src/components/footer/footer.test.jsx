@@ -34,4 +34,6 @@ test("footer render correctly", () => {
   expect(header).toHaveTextContent("List of Colours");
   const cards = screen.queryAllByRole("listitem");
   expect(cards.length).toBe(3);
+  const singleCard = screen.getAllByRole("listitem")[0].firstChild;
+  expect(singleCard).toHaveStyle({ backgroundColor: "#541528" });
 });
