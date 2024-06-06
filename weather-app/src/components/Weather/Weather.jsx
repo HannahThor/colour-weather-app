@@ -41,7 +41,7 @@ export default function Weather({
           className="weather-icon"
           src={`/images/weather/${weatherIcon}.png`}
         />
-        <p>{weatherDescription}</p>
+        <p aria-label="weather-description">{weatherDescription}</p>
         <div className="tempToday">
           <div>
             <p>H: {maxTemp}°C</p>
