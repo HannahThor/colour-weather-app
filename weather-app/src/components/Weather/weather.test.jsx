@@ -55,4 +55,8 @@ test("Weather renders correctly", () => {
   //   expect(weatherDesc).toHaveTextContent("scattered clouds");
   const weatherDesc = screen.getByLabelText("weather-description");
   expect(weatherDesc).toHaveTextContent("scattered clouds");
+  const hTemp = screen.getByLabelText("high-temp");
+  expect(hTemp).toHaveTextContent("H: 18");
+  const lTemp = screen.getByLabelText("low-temp");
+  expect(lTemp).toHaveTextContent("L: 12");
 });

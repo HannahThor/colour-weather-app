@@ -44,10 +44,10 @@ export default function Weather({
         <p aria-label="weather-description">{weatherDescription}</p>
         <div className="tempToday">
           <div>
-            <p>H: {maxTemp}°C</p>
+            <p aria-label="high-temp">H: {maxTemp}°C</p>
           </div>
           <div>
-            <p>L: {minTemp}°C</p>
+            <p aria-label="low-temp">L: {minTemp}°C</p>
           </div>
         </div>
         <Yesterday
