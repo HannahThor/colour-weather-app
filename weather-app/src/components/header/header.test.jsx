@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Header from "../components/header/Header.jsx";
+import Header from "./Header.jsx";
 
 test("render correctly", () => {
   render(<Header />);
