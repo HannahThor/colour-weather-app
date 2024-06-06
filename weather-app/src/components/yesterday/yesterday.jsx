@@ -16,6 +16,7 @@ export default function Yesterday({
   return (
     <section className="yesterday-card">
       <div
+        aria-label="yesterday-colour"
         style={{ backgroundColor: `${yesterdayHex}` }}
         className="colour-box"
         onMouseOver={handleMouseOver}
