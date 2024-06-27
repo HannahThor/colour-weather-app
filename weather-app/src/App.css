@@ -53,6 +53,7 @@ input {
 
 .search-your-city {
   text-align: center;
+  padding-top: 50px;
 }
 
 .today {
@@ -86,5 +87,8 @@ input {
   font-size: 6vw;
 }
 
-@media screen {
+@media screen and (min-width: 900px) {
+  body {
+    width: clamp(900px, 70vh, 1000px);
+  }
 }

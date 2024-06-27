@@ -72,3 +72,15 @@ footer {
 .each-colour {
   list-style: none;
 }
+
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  .colour-container {
+    grid-template-columns: auto auto auto auto auto;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .colour-container {
+    grid-template-columns: auto auto auto auto auto auto;
+  }
+}

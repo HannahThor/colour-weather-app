@@ -4,7 +4,8 @@ export default function InitialDisplay() {
   return (
     <section>
       <p className="search-your-city">
-        Search your nearest city and we will return the colour of the day
+        Search your nearest city and we will return the colour of the day,
+        stitch along with us!
       </p>
     </section>
   );
