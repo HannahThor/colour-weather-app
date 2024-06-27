@@ -2,7 +2,7 @@
 import { test, expect } from "@playwright/test";
 
 test("find weather in london", async ({ page }) => {
-  await page.goto("https://stitch-the-weather.netlify.app");
+  await page.goto("https://stitch-the-weather.netlify.app/");
 
   const title = await page.getByRole("heading", { name: "Stitch the Weather" });
 
@@ -17,9 +17,13 @@ test("find weather in london", async ({ page }) => {
 
   await expect(inputbox).toHaveValue("London");
 
-  const button = await page.getByRole("button");
+  const button = await page.getByRole("img");
 
   await expect(button).toBeVisible();
 
-  await button.click();
+  await button.click({ force: true });
+
+  page.waitForResponse();
+
+  await expect(button).toBeVisible();
 });
