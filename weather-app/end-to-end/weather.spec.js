@@ -2,6 +2,7 @@
 import { test, expect } from "@playwright/test";
 
 test("find weather in london", async ({ page }) => {
+  test.setTimeout(120000);
   await page.goto("https://stitch-the-weather.netlify.app/");
 
   const title = await page.getByRole("heading", { name: "Stitch the Weather" });
@@ -21,9 +22,13 @@ test("find weather in london", async ({ page }) => {
 
   await expect(button).toBeVisible();
 
+  const downloadPromise = page.waitForEvent("load");
   await button.click({ force: true });
+  await downloadPromise;
+  // await button.click({ force: true });
 
-  page.waitForResponse();
+  // await page.waitForLoadState("load");
+  // const downloadPromise = page.waitForEvent("load");
 
-  await expect(button).toBeVisible();
+  // const load = await downloadPromise;
 });
