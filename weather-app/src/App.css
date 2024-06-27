@@ -42,7 +42,7 @@ input {
 .search-button {
   background: transparent;
   border: none;
-  margin: 4px 15px 0 0;
+  margin: 0;
 }
 /* TODO: change serach button so that  it highlights when clicked? */
 
