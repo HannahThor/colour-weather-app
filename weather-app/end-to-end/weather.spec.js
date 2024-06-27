@@ -1,7 +1,7 @@
 // @ts-check
 import { test, expect } from "@playwright/test";
 
-test("loading page", async ({ page }) => {
+test("find weather in london", async ({ page }) => {
   await page.goto("https://stitch-the-weather.netlify.app");
 
   const title = await page.getByRole("heading", { name: "Stitch the Weather" });
@@ -16,4 +16,10 @@ test("loading page", async ({ page }) => {
   await inputbox.fill("London");
 
   await expect(inputbox).toHaveValue("London");
+
+  const button = await page.getByRole("button");
+
+  await expect(button).toBeVisible();
+
+  await button.click();
 });
