@@ -33,4 +33,11 @@ test("find weather in london", async ({ page }) => {
   // const downloadPromise = page.waitForEvent("load");
 
   // const load = await downloadPromise;
+  const highTemp = page.getByLabel("high-temp");
+
+  await expect(highTemp).toBeVisible();
+
+  const weatherDescription = page.getByLabel("weather-description");
+
+  await expect(weatherDescription).toBeVisible();
 });
