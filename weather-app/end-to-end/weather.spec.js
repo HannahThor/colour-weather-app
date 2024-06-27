@@ -8,4 +8,12 @@ test("loading page", async ({ page }) => {
 
   // Expect a title "to contain" a substring.
   await expect(title).toContainText("Stitch the Weather");
+
+  const inputbox = await page.getByRole("searchbox");
+
+  await expect(inputbox).toBeEmpty();
+
+  await inputbox.fill("London");
+
+  await expect(inputbox).toHaveValue("London");
 });
