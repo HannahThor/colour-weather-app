@@ -28,3 +28,7 @@ dist-ssr
 
 # Weather app progress folder
 Weather-app-progress
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
