@@ -22,10 +22,12 @@ test("find weather in london", async ({ page }) => {
 
   await expect(button).toBeVisible();
 
-  const downloadPromise = page.waitForEvent("load");
+  // const downloadPromise = page.waitForEvent("load");
   await button.click({ force: true });
-  await downloadPromise;
+  // await downloadPromise;
   // await button.click({ force: true });
+
+  await page.waitForSelector(".weather-icon");
 
   // await page.waitForLoadState("load");
   // const downloadPromise = page.waitForEvent("load");
